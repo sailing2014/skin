@@ -1,0 +1,6 @@
+Project = skin
+User_ID = 6040
+Type    = nginx_php
+Version = alpha
+Owner   = yang.f
+Email   = fan.yang@qiwo.mobi

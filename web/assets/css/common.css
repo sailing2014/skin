@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+/*通用样式*/
+html, body, div, span, applet, object, iframe, table, caption,
+tbody, tfoot, thead, tr, th, td, del, dfn, em, font, img, ins,
+kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr,
+acronym, address, big, cite, code, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	list-style:none;
+	
+}
+body
+{
+	background:#eeeeee;
+	color:#333;
+    font-size:12px;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+a img{ border:none; vertical-align:middle; padding-bottom:5px;}
+body{ font-family:" Adobe 黑体 Std R",\5FAE\8F6F\96C5\9ED1,sans-serif;  margin:0; padding:0;}
+
+/*浮动相关*/
+.floatleft{float:left;}
+.floatright{float:right;}
+.clear{clear:both;}
+.fix{overflow:hidden; zoom:1;}
+.p_center{text-align:center;}
+.p_right{text-align:right;}
+
+
+/*字体大小相关*/
+.f_bold{ font-weight:bold;}
+.f_green{ color:#0dbf1e;}
+.f_grey{color:#666;}
+.f_red{color:#ff4d4d;}
+.bggrey{ background:#eee;}
+.f12{ font-size:12px;}
+.greybox{ height:4px; background:#f0f0f0;}
+.pl10{ padding-left:10px;}
+.pr10{ padding-right:10px;}
+.mid{ vertical-align:middle; padding-bottom:2px;}
+.clearfix:after {
+visibility: hidden;
+display: block;
+font-size: 0;
+content: " ";
+clear: both;
+height: 0;
+}
+.clearfix { display: inline-table; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }ul li p { }
+.elementCon .elementTxt p { }

@@ -1,0 +1,6 @@
+phptest:
+   script:  
+     - sudo cp -fr /home/gitlab-runner/scripts/php_unit.sh .
+     - sudo sh  php_unit.sh
+   only:
+     - tags

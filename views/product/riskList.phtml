@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="max-age=0" />
+<meta name="MobileOptimized" content="240" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name = "format-detection" content="telephone = no" />
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+<title>{{title}}</title>
+<link rel="stylesheet"  href="/assets/css/common.css" type="text/css" />
+<link rel="stylesheet"  href="/assets/css/style.css" type="text/css" />
+</head>
+<body>
+    <!--头部标题-->
+<!--<div class="skinTop">
+<a class="leftarrow" href="../product/index/{{pid}}?token={{token}}&f=1"><img src="/assets/images/leftarrow.png" width="9" height="17" alt=""/></a>
+<h1>{{title}}</h1>
+<div class="right"><a href="#" id="collect" class="collect {% if pid and collect%} cback_red {%else%}cback_plain{%endif%}" onclick="collect('{{token}}','{{pid}}')"></a><a href="#share"><img src="/assets/images/share.png" width="17" height="17" alt=""/></a></div>
+</div>-->
+    <!--头部标题-->
+<div class="cfCon">
+   <div class="cfbox">
+       <table width="100%" border="0" cellpadding="0" cellspacing="0" class="cfTable">
+         <tbody>  
+    <tr>
+      <th>成分名称</th>
+      <th>功效成分</th>
+      <th>易致痘成分</th>
+      <th>易致敏成分</th>
+      <th style="border:none;">孕哺期慎用</th>
+    </tr>   
+   {% for index,v in components%}
+    <tr>
+        {% if index is even%}
+            <td> <a href="../product/element/{{v["component_id"]}}?pid={{pid}}&token={{token}}">{{v["title"]}}</a></td>
+           <td>{% if v['active'] %}<i class="yse">{% endif %}</i></td>
+           <td>{% if v['acne_risk'] %}<i class="yse">{% endif %}</i></td>
+           <td>{% if v['sensitization'] %}<i class="yse">{% endif %}</td>
+           <td>{% if v['safety'] %}<i class="yse">{% endif %}</td>
+      {% else %}
+            <th> <a href="../product/element/{{v["component_id"]}}?pid={{pid}}&token={{token}}">{{v["title"]}}</a></th>
+            <th>{% if v['active'] %}<i class="yse">{% endif %}</i></th>
+            <th>{% if v['acne_risk'] %}<i class="yse">{% endif %}</i></th>
+            <th>{% if v['sensitization'] %}<i class="yse">{% endif %}</i></th>
+            <th style="border:none;">{% if v['safety'] %}<i class="yse">{% endif %}</i></th>
+      {% endif %}
+    </tr> 
+    {% endfor %}
+  </tbody>
+</table>
+
+</div>
+<script src="/assets/js/jquery.min.js"></script>
+ <script src="/assets/js/collect.js?v=1.0.3"></script>
+</body>
+</html>

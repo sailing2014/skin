@@ -1,0 +1,37 @@
+<html lang="cn">
+<head>
+<meta charset="utf-8">
+<title>bbc delete data</title>
+<link rel="stylesheet"  href="/assets/css/common.css" type="text/css" />
+<link rel="stylesheet"  href="/assets/css/style.css" type="text/css" />
+</head>
+<body>
+ 
+
+<script src="/assets/js/jquery.min.js"></script>
+<script type="text/javascript">
+var url = "/v1/article/bbc_raw/intl"; //369021
+for(var pages =1 ;pages <= 1800; pages++){
+    $.ajax({
+        type: 'DELETE',
+        url :url + "?page=" + pages +"&size=100",
+        headers: {
+            APIKEY : "32C73BA3F00E407A",
+            APITOKEN:"eccb782333e9cdaedb8ee50e5e6a91ebd417083c",
+            TIME:1418021278
+        },
+        cache : false, //默认值true
+        dataType: 'json',
+        success : function(data){
+            console.log(data);
+        },
+        error:function(e){
+            console.log(url);
+            console.log("error");
+            console.log(e);
+        }
+    });
+}
+</script>
+</body>
+</html>
